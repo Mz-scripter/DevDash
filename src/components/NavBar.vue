@@ -1,10 +1,13 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
+
+defineProps({
+  score: Number,
+  streak: Number,
+})
 
 const isPlaying = ref(true);
-const score = ref(0);
 const time = ref('1:00');
-const streak = ref(0);
 
 const toggleIsPlaying = () => {
   isPlaying.value = !isPlaying.value;
